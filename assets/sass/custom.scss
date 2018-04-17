@@ -1,0 +1,13 @@
+
+//@import "bourbon";
+// @import "neat";
+@import "partials/_base";
+@import "partials/_mixins";
+@import "partials/_fonts";
+@import "partials/_variables";
+@import "partials/_clases";
+@import "partials/_site-clases";
+
+h1{
+	font-family: 'Gotham-Light';
+}

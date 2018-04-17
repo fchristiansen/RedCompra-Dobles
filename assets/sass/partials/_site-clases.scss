@@ -1,0 +1,25 @@
+.btn-participa{
+	background-color: $celeste;
+	color: white;
+	text-transform: uppercase;
+	font-family: $bold;
+	font-size: 26px;
+	border-radius: 0;
+	border: none;
+	padding: 10px 80px;
+	transition: all .3s ease;
+	display: table;
+	margin: 0 auto;
+	&:hover{
+		background-color: darken($celeste, 5%);
+		color: white;
+
+	}
+}
+
+.btn-vota{
+	@extend .btn-participa;
+	padding: 8px;
+	font-size: 26px;
+
+}

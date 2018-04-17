@@ -1,0 +1,275 @@
+// mixins
+@mixin opacidad($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin link{
+  transition: all 0.2s ease-in-out;
+  color: black;
+  cursor: pointer;
+  &:hover, &:focus{
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+@mixin color-place-holder($color){
+  input.form-control::-webkit-input-placeholder {color:$color;}
+  input.form-control:-moz-placeholder {color:$color;}
+  input.form-control::-moz-placeholder {color:$color;}
+  input.form-control:-ms-input-placeholder {color:$color;}
+}
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+  }
+}
+//We use this for creating scalable
+// elements (usually images / background images) that maintain a ratio.
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+//So to use this you could write the below and your div would
+//have a ratio commonly utilised by video.
+
+  // div {
+  //     @include responsive-ratio(16,9);
+  // }
+
+
+//Media queries
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "ipadv":        768px,
+    "ipadh":        1024px,
+    "desktop":      1200px,
+    "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// The example below showing the padding and font-size increasing once the viewport gets over 1024px.
+
+// .site-header {
+//     padding: 2rem;
+//     font-size: 1.8rem;
+//     @include mq('tablet-wide') {
+//         padding-top: 4rem;
+//         font-size: 2.4rem;
+//     }
+// }
+
+
+
+
+//  Truncate
+// Adding Truncation to an element isn't as simple as it should be,
+// although it is with this handy time saver, meaning when you include
+// the mixin, you only have to specify your boundry with a
+// max width value, happy days!
+// values are: clip, ellipsis, or a string
+
+
+
+@mixin truncar($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+
+
+//triangulo
+
+
+// * @include triangle within a pseudo element and add positioning properties (ie. top, left)
+// * $direction: up, down, left, right
+
+
+
+@mixin triangle($direction, $size: 6px, $color: #222){
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0; width: 0;
+  @if ($direction == 'up'){
+    border-bottom: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  }
+  @else if ($direction == 'down'){
+    border-top: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  }
+  @else if ($direction == 'left'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-right: $size solid $color;
+  }
+  @else if ($direction == 'right'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+// otro media querie
+
+// Breakpoints for each query
+$smartphone: 480px;
+$tabletPortrait: 767px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
+@mixin respondTo($media) {
+  @if $media == smartphone {
+    @media (max-width: $smartphone) { @content; }
+  }
+  @else if $media == tablet {
+    @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape) { @content; }
+  }
+  @else if $media == smallScreen {
+    @media (max-width: $desktop) { @content; }
+  }
+  @else if $media == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+}
+
+//  uso
+// div {
+//     // regular styles here
+//     @include respondTo(desktop) {
+//         &:hover { background: blue; } // only add the hover effect on desktop browsers
+//     }
+// }
+
+
+
+
+
+//animar
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin margen_item{
+
+    margin-bottom: 0;
+      @media(max-width:991px){
+           margin-bottom: 50px;
+      }
+}
+
+// uso
+
+// @include keyframes(slide-down) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+
+// .element {
+//   width: 100px;
+//   height: 100px;
+//   background: black;
+//   @include animation('slide-down 5s 3');
+// }
+
+
+//OTRO REM
+// @mixin font-size($size, $base: 16) {
+//   font-size: $size; // fallback for old browsers
+//   font-size: ($size / $base) * 1rem;
+// }
+// USO
+// body {
+//   @include font-size(16);
+// }
+
+// p {
+//   @include font-size(12, 10);
+// }
+
+
+
+// .example a {
+//   padding: 3px;
+//   border-radius: 1px;
+//   color: rgba(107,54,62,0.9);
+//   background-color: rgba(107,54,62,0.1);
+//   transition: all 0.15s ease;
+//   background-size: 100% 200%;
+//   background-position: 0 -100%;
+//   background-image: linear-gradient(to top, transparent 50%, rgba(107,54,62,0.9) 50%);
+// }
+// .example a:hover {
+//   color: #fff; background-position: 0 0;
+
+// }
+

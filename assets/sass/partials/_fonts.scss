@@ -1,0 +1,15 @@
+
+//Rems
+//Set a rem font size with pixel fallback
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+$bold: 'Gotham-Bold', Helvetica, Arial, sans-serif;
+$light: 'Gotham-Light', Helvetica, Arial, sans-serif;
