@@ -24,9 +24,9 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/font-awesome.min-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"\/assets\/css\/fonts.css": {
@@ -39,19 +39,64 @@
 		"oF": 1,
 		"oS": 3
 		},
+	"\/assets\/fonts\/fontawesome-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/assets\/fonts\/fontawesome-webfont.eot",
+		"oF": 1
+		},
+	"\/assets\/fonts\/fontawesome-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 1,
+		"oAP": "\/assets\/fonts\/fontawesome-webfont.svg",
+		"oF": 1,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/fontawesome-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/assets\/fonts\/fontawesome-webfont.ttf",
+		"oF": 1
+		},
+	"\/assets\/fonts\/fontawesome-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/assets\/fonts\/fontawesome-webfont.woff",
+		"oF": 1
+		},
+	"\/assets\/fonts\/fontawesome-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/assets\/fonts\/fontawesome-webfont.woff2",
+		"oF": 1
+		},
+	"\/assets\/fonts\/FontAwesome.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/assets\/fonts\/FontAwesome.otf",
+		"oF": 1
+		},
 	"\/assets\/fonts\/GothamBold.eot": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamBold.eot",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamBold.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamBold.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -59,37 +104,37 @@
 	"\/assets\/fonts\/GothamBold.ttf": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamBold.ttf",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamBold.woff": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamBold.woff",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamBold.woff2": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamBold.woff2",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamLight.eot": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamLight.eot",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamLight.svg": {
 		"ft": 2097152,
 		"miP": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamLight.svg",
-		"oF": 0,
+		"oF": 1,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
@@ -97,23 +142,23 @@
 	"\/assets\/fonts\/GothamLight.ttf": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamLight.ttf",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamLight.woff": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamLight.woff",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/fonts\/GothamLight.woff2": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/fonts\/GothamLight.woff2",
-		"oF": 0
+		"oF": 1
 		},
 	"\/assets\/img\/bg.jpg": {
 		"ft": 16384,
@@ -121,6 +166,16 @@
 		"oA": 1,
 		"oAP": "\/assets\/img\/bg.jpg",
 		"oF": 1,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/img\/bg2.jpg": {
+		"ft": 16384,
+		"iS": 500245,
+		"oA": 0,
+		"oAP": "\/assets\/img\/bg2.jpg",
+		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
