@@ -7,6 +7,21 @@
 		height: auto;
 	}
 }
+
+#video{
+	position: relative;
+	min-height: 100vh;
+
+	.heading{
+		@include centerer(true, true);
+
+		width: 100%;
+		top: 40%;
+		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { /* STYLES GO HERE */
+			top: 44%;
+		}
+	}
+}
 .video-container{
 	max-width: 600px;
 	display: block;
@@ -44,7 +59,7 @@
 	transition: all .3s ease;
 	display:inline-block;
 	margin-top: 30px;
-	margin-bottom: 200px;
+	//margin-bottom: 200px;
 
 	&:hover, &:focus{
 		background-color: darken($celeste, 5%);

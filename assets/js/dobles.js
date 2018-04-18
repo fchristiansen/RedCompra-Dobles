@@ -21,9 +21,9 @@ $( document ).ready(function() {
 	    $(this).tooltip('show');
 	});
 
-	$("input[data-toggle='tooltip']").on('blur', function() {
-	    $(this).tooltip('show');
-	});
+	// $("input[data-toggle='tooltip']").on('blur', function() {
+	//     $(this).tooltip('show');
+	// });
 
 
 });

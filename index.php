@@ -31,21 +31,22 @@
   </head>
   <body>
   	<div id="background"></div>
-  	<div class="logo center-block">
-  		<img class="img-responsive img-logo" src="assets/img/logo.png" alt="">
-  	</div>
-  	<section id="video">
-  		<div class="video-container">
-			<div class="embed-container">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/uZFTK0sEMMs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+
+  	<section id="video">
+  		<div class="heading">
+  			<div class="logo center-block">
+				<img class="img-responsive img-logo" src="assets/img/logo.png" alt="">
+			</div>
+	  		<div class="video-container">
+				<div class="embed-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/uZFTK0sEMMs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+	  		</div>
+			<div class="text-center">
+				<a class="btn btn-default btn-participa scroll-to" href="#dobleslink">participa aquí</a>
 			</div>
   		</div>
-		<div class="text-center">
-			<a class="btn btn-default btn-participa scroll-to" href="#dobleslink">participa aquí</a>
-		</div>
-
-
   	</section> <!-- video -->
 <div id="dobleslink"></div>
   	<section id="grid-dobles">
