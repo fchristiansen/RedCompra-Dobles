@@ -1,0 +1,6 @@
+
+*.scssc
+assets/sass/.DS_Store
+assets/.DS_Store
+assets/sass/modules/.DS_Store
+config.codekit3

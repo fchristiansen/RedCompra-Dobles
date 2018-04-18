@@ -29,16 +29,14 @@
   		<img class="img-responsive img-logo" src="assets/img/logo.png" alt="">
   	</div>
   	<section id="video">
-  		<div class="container">
-			<div class="row">
-				<div class="video-container center-block">
-					<img class="img-responsive" src="https://api.fnkr.net/testimg/650x370/00CED1/FFF/?text=img+placeholder">
-					<a href="javascript:void(0);" class="btn btn-default btn-participa"> participa aquí</a>
+  		<div class="video-container">
+				<div class="embed-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/uZFTK0sEMMs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 				</div>
-
-			</div>
   		</div>
-
+		<!-- <a href="javascript:void(0);" class="btn btn-default btn-participa">participa aquí</a> -->
+				<div class="btn-participa">participa aquí</div>
   	</section>
   	<section id="grid-dobles">
   		<div class="container">
@@ -46,49 +44,65 @@
   			<div class="row">
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble" data-toggle="modal" data-target="#modal-voto">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota" data-toggle="modal" data-target="#modal-voto">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota" data-toggle="modal" data-target="#modal-gracias">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble"><img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder"></a>
+						<a href="javascript:void(0);" class="btn-doble">
+							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
@@ -143,7 +157,7 @@
 		  </div>
 		</div>
 		</div>
-	</div> <!-- modal -->
+	</div> <!-- modal registro -->
 
 	<!-- Modal -->
 	<div class="modal fade" id="modal-gracias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -158,17 +172,13 @@
 			  	 <div class="caja-doble">
 			  	 	<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/150x150/00CED1/FFF/?text=img+placeholder">
 			  	 		<p>Ya estás participando <br>
-					por espectaculares premios </p>
+				     	por espectaculares premios </p>
 					<a class="btn btn-default btn-enviar-voto center-block" data-dismiss="modal">cerrar</a>
 			  	 </div>
-
-
 		  </div>
 		</div>
 		</div>
-	</div> <!-- modal -->
-
-
+	</div> <!-- modal gracias -->
 
   </body>
 </html>
