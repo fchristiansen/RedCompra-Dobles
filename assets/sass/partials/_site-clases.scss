@@ -1,5 +1,5 @@
 .logo{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	@media(max-width:767px){
 		max-width: 300px;
 		margin-top: 40px;
@@ -32,10 +32,6 @@
 	}
 }
 
-
-
-
-
 .btn-participa{
 	background-color: $celeste;
 	color: white;
@@ -47,10 +43,9 @@
 	padding: 10px 30px;
 	transition: all .3s ease;
 	display:inline-block;
-	//display: table;
-//	margin: 40px auto;
-margin-top: 40px;
-margin-bottom: 40px;
+	margin-top: 30px;
+	margin-bottom: 200px;
+
 	&:hover, &:focus{
 		background-color: darken($celeste, 5%);
 		color: white;
@@ -326,14 +321,14 @@ footer{
 
 		}
 		.btn-enviar-voto{
-						font-size: 20px;
-						border-radius: 0;
-						border: none;
-						text-transform: uppercase;
-						font-family: $bold;
-						padding-left: 30px;
-						padding-right: 30px;
-					}
+			font-size: 20px;
+			border-radius: 0;
+			border: none;
+			text-transform: uppercase;
+			font-family: $bold;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 
 }
