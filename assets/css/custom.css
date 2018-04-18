@@ -2,7 +2,7 @@ body { position: relative; padding-top: 40px; }
 
 #background { background: url(../img/bg3.jpg) no-repeat; background-position: center top; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; }
 @media (max-width: 768px) { #background { background: url(../img/bg-xs.jpg) no-repeat; background-position: center top; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; } }
-@media (max-width: 767px) { #background { background: url(../img/bg-xxs.jpg) center no-repeat; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; } }
+@media (max-width: 767px) { #background { background: url(../img/bg-xxs.jpg) center top no-repeat; background-size: contain; background-color: #000; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; } }
 
 a:focus, input[type="text"] { outline: none !important; }
 
@@ -74,6 +74,7 @@ a:focus, input[type="text"] { outline: none !important; }
 #grid-dobles .caja-doble .img-doble { margin-bottom: 20px; display: block; border-radius: 200px; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #DDD; border: 5px solid #cfd8dc; }
 
 footer { padding: 40px 0; }
+@media (max-width: 767px) { footer { background: url(../img/bg-footer-xxs.jpg) no-repeat; background-position: center top; background-size: cover; } }
 footer .rrss { position: absolute; right: 0; top: 0; }
 @media (max-width: 991px) { footer .rrss { position: relative; right: auto; top: auto; display: table; margin: 40px auto 0 auto; } }
 footer .rrss ul { list-style-type: none; padding: 0; }

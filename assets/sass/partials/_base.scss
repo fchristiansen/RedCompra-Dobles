@@ -38,8 +38,9 @@ body{
 			z-index: -1;
 	}
 	@media(max-width:767px){
-		background: url(../img/bg-xxs.jpg)  center no-repeat;
-		background-size: cover;
+		background: url(../img/bg-xxs.jpg)  center top no-repeat;
+		background-size: contain;
+		background-color: #000;
 		position: absolute;
 		left: 0;
 		top: 0;

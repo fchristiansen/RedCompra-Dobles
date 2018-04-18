@@ -131,6 +131,11 @@
 footer{
 	padding: 40px 0;
 
+	@media(max-width:767px){
+			background: url(../img/bg-footer-xxs.jpg) no-repeat;
+			background-position: center top;
+			background-size: cover;
+	}
 	.rrss{
 		position: absolute;
 		right: 0;
