@@ -1,10 +1,12 @@
-html { height: 100%; }
+body { position: relative; padding-top: 50px; }
 
-body { position: relative; min-height: 100%; padding-top: 50px; }
-
-#background { background: url(../img/bg2.jpg) no-repeat; background-position: center top; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; }
+#background { background: url(../img/bg3.jpg) no-repeat; background-position: center top; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; }
+@media (max-width: 768px) { #background { background: url(../img/bg-xs.jpg) no-repeat; background-position: center top; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; } }
+@media (max-width: 767px) { #background { background: url(../img/bg-xxs.jpg) no-repeat; background-position: center top; background-size: cover; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0; padding: 0; z-index: -1; } }
 
 a:focus, input[type="text"] { outline: none !important; }
+
+.tooltip { z-index: 100000000; }
 
 .no-gutter > [class*='col-'] { padding-right: 0; padding-left: 0; }
 
@@ -56,7 +58,7 @@ a:focus, input[type="text"] { outline: none !important; }
 .btn-participa, .btn-vota { background-color: #00b3e5; color: white; text-transform: uppercase; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; font-size: 24px; border-radius: 0; border: none; padding: 10px 30px; -webkit-transition: all .3s ease; transition: all .3s ease; display: table; margin: 40px auto; }
 .btn-participa:hover, .btn-vota:hover, .btn-participa:focus, .btn-vota:focus { background-color: #009fcc; color: white; }
 
-.btn-vota { padding: 8px; font-size: 20px; margin: 0 auto; }
+.btn-vota { padding: 10px 30px; font-size: 18px; margin: 0 auto; }
 
 #grid-dobles h1 { font-family: "Gotham-Light", Helvetica, Arial, sans-serif; text-transform: uppercase; color: white; text-align: center; margin-top: 0; margin-bottom: 40px; font-size: 32px; }
 #grid-dobles h1 span.bold { font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; }

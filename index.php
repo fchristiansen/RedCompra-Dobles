@@ -9,6 +9,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Redcompra - Dobles</title>
 
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,22 +36,25 @@
   	</div>
   	<section id="video">
   		<div class="video-container">
-				<div class="embed-container">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/uZFTK0sEMMs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<div class="embed-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/uZFTK0sEMMs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-				</div>
+			</div>
   		</div>
-		<!-- <a href="javascript:void(0);" class="btn btn-default btn-participa">participa aquí</a> -->
-				<div class="btn-participa">participa aquí</div>
-  	</section>
+		<a class="btn btn-default btn-participa scroll-to" href="#dobleslink">participa aquí</a>
+
+  	</section> <!-- video -->
+<div id="dobleslink"></div>
   	<section id="grid-dobles">
   		<div class="container">
+
   			<h1>¡vota por tu <span class="bold">favorito!</span></h1>
+
   			<div class="row">
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble" data-toggle="modal" data-target="#modal-voto">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/1.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota" data-toggle="modal" data-target="#modal-voto">votar</a>
 					</div>
@@ -53,7 +62,7 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/2.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota" data-toggle="modal" data-target="#modal-gracias">votar</a>
 					</div>
@@ -61,7 +70,7 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/3.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
@@ -69,7 +78,7 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/4.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
@@ -77,7 +86,7 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/5.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
@@ -85,7 +94,7 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/6.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
@@ -93,7 +102,7 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/7.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
@@ -101,14 +110,11 @@
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
 						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="https://api.fnkr.net/testimg/200x200/00CED1/FFF/?text=img+placeholder">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/8.png">
 						</a>
 						<a href="" class="btn btn-default btn-vota">votar</a>
 					</div>
 				</div>
-
-
-
   			</div>
   		</div>
   	</section> <!-- grid dobles -->
@@ -121,8 +127,8 @@
 			<ul>
 				<li><a href="#" target="_blank">Bases Legales</a></li>
 				<li class="divisor"> | </li>
-				<li><a class="icon-wrapper" href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a class="icon-wrapper" href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a class="icon-wrapper" href="https://www.facebook.com/RedcompraCL/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a class="icon-wrapper" href="https://twitter.com/redcompracl?lang=es" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 			</ul>
 		</div>
 		</div>
@@ -147,10 +153,10 @@
 
 				<form id="formDatos" class="center-block">
 					<div class="form-group">
-						<input type="text" class="form-control" id="rut" placeholder="RUT">
+						<input id="rut" type="text" class="form-control" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido.">
 					</div>
 					<div class="form-group">
-						<input type="email" class="form-control" id="email" placeholder="EMAIL">
+						<input id="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar  un email válido. Así podremos contactarte si eres ganador.">
 					</div>
 					<a class="btn btn-default btn-enviar-voto center-block">votar</a>
 				</form>
