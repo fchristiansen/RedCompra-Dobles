@@ -1,5 +1,11 @@
 .logo{
 	margin-bottom: 50px;
+	@media(max-width:767px){
+		max-width: 300px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		height: auto;
+	}
 }
 .video-container{
 	max-width: 600px;
@@ -40,8 +46,11 @@
 	border: none;
 	padding: 10px 30px;
 	transition: all .3s ease;
-	display: table;
-	margin: 40px auto;
+	display:inline-block;
+	//display: table;
+//	margin: 40px auto;
+margin-top: 40px;
+margin-bottom: 40px;
 	&:hover, &:focus{
 		background-color: darken($celeste, 5%);
 		color: white;
@@ -51,6 +60,7 @@
 
 .btn-vota{
 	@extend .btn-participa;
+	display: table;
 	padding: 10px 30px;
 	font-size:18px;
 	margin: 0 auto;

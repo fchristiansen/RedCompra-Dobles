@@ -41,7 +41,10 @@
 
 			</div>
   		</div>
-		<a class="btn btn-default btn-participa scroll-to" href="#dobleslink">participa aquí</a>
+		<div class="text-center">
+			<a class="btn btn-default btn-participa scroll-to" href="#dobleslink">participa aquí</a>
+		</div>
+
 
   	</section> <!-- video -->
 <div id="dobleslink"></div>
