@@ -8,6 +8,10 @@ a:focus, input[type="text"] { outline: none !important; }
 
 .tooltip { z-index: 100000000; }
 
+body { padding-right: 0px !important; }
+
+.modal-open { overflow-y: auto; }
+
 .no-gutter > [class*='col-'] { padding-right: 0; padding-left: 0; }
 
 .no-padding { padding: 0 !important; display: block; }

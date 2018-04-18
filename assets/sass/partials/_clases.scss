@@ -2,6 +2,15 @@
     z-index:100000000;
 }
 
+//modal ya no mueve el background a la derecha
+body {
+  padding-right: 0px !important
+}
+
+.modal-open {
+  overflow-y: auto;
+}
+
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
