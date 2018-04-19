@@ -52,6 +52,8 @@ body { padding-right: 0px !important; }
 
 .center-block { display: table; margin: 0 auto; }
 
+.captcha-container { padding: 20px; border: 1px solid white; }
+
 .captcha-format { color: white; margin-bottom: 15px; }
 
 #captchaimage { margin-bottom: 20px; }
@@ -108,7 +110,7 @@ footer .rrss ul li a.icon-wrapper { font-size: 20px; }
 .modal-dialog { display: inline-block; text-align: left; vertical-align: middle; }
 
 #modal-voto .modal-dialog .modal-content, .modal-gracias .modal-dialog .modal-content { background-color: transparent; -webkit-box-shadow: none; box-shadow: none; border: none; border-radius: 0; }
-#modal-voto .modal-dialog .modal-content .modal-body .close, .modal-gracias .modal-dialog .modal-content .modal-body .close { position: absolute; opacity: 1; color: white; font-size: 40px; right: 0; top: -40px; }
+#modal-voto .modal-dialog .modal-content .modal-body .close, .modal-gracias .modal-dialog .modal-content .modal-body .close { position: absolute; opacity: 1; color: white; font-size: 40px; right: 0; top: -40px; outline: none; }
 #modal-voto .modal-dialog .modal-content .modal-body .title, .modal-gracias .modal-dialog .modal-content .modal-body .title { text-align: center; margin-bottom: 30px; }
 @media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title, .modal-gracias .modal-dialog .modal-content .modal-body .title { margin-bottom: 30px; } }
 #modal-voto .modal-dialog .modal-content .modal-body .title h1, .modal-gracias .modal-dialog .modal-content .modal-body .title h1 { margin: 0; font-family: "Gotham-Light", Helvetica, Arial, sans-serif; font-size: 30px; text-transform: uppercase; color: white; }

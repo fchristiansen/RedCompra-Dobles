@@ -125,14 +125,16 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				<form id="formDatos" class="center-block" method="post" action="ajax/guardar.php">
 					<div class="form-group">
 						<input type="hidden" name="doble" id="id-doble" value="">
-						<input title="Este campo es requerido" id="rut" name="rut" type="text" class="form-control rut" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido." required="">
+						<input id="rut" name="rut" type="text" class="form-control rut" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido." required="">
 					</div>
 					<div class="form-group">
-						<input title="Este campo es requerido" name="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un email válido. Así podremos contactarte si eres ganador." required="">
+						<input name="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un email válido. Así podremos contactarte si eres ganador." required="">
 					</div>
-					<div class="form-group">
-						<div id="captchaimage"><img src="images/image.php?<?php echo time(); ?>" width="132" height="46" alt="Captcha image">
-						<a class="btn btn-default" href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg">Refrescar imagen</a></div>
+					<div class="form-group captcha-container">
+						<div id="captchaimage">
+							<img src="images/image.php?<?php echo time(); ?>" width="132" height="46" alt="Captcha image">
+							<a class="btn btn-default" href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg">Refrescar imagen</a>
+						</div> <!-- captchaimage -->
 						<label class="captcha-format" for="captcha">
 						Ingrese los caracteres como se ve en la imagen de arriba (case insensitive):</label>
 						<input type="text" maxlength="6" name="captcha" id="captcha" class="form-control">

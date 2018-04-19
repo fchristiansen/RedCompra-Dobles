@@ -1,5 +1,8 @@
 // form styles
-
+.captcha-container{
+	padding: 20px;
+	border: 1px solid white;
+}
 .captcha-format{
 	color: white;
 	margin-bottom: 15px;
@@ -16,27 +19,27 @@
 	}
 	#refreshimg{
 
-	display: inline-block;
-    margin-bottom: 0;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    user-select: none;
-    background-image: none;
-	border-radius: 0;
-	border: none;
-	background-color: #28B3E6;
-	color: white;
-	font-family: $bold;
-	font-size: 15px;
-	transition: all .3s ease;
-	text-decoration: none;
-	margin-left: 10px;
-	 padding:12px;
+		display: inline-block;
+		margin-bottom: 0;
+		font-weight: 400;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		touch-action: manipulation;
+		cursor: pointer;
+		user-select: none;
+		background-image: none;
+		border-radius: 0;
+		border: none;
+		background-color: #28B3E6;
+		color: white;
+		font-family: $bold;
+		font-size: 15px;
+		transition: all .3s ease;
+		text-decoration: none;
+		margin-left: 10px;
+		padding:12px;
 		&:hover{
 			background-color: #009fcc;
 			color: white;
@@ -272,6 +275,7 @@ footer{
 					font-size: 40px;
 					right: 0;
 					top: -40px;
+					outline: none;
 				}
 				.title{
 					text-align: center;
