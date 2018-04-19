@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php 
+// Make the page validate
+ini_set('session.use_trans_sid', '0');
+
+// Include the random string file
+require 'rand.php';
+
+// Begin the session
+session_start();
+
+// Set the session contents
+$_SESSION['captcha_id'] = $str;
+
+require_once('ajax/MysqliDb.php');
+require_once('ajax/config.php');
+$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
+?>
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -55,70 +71,22 @@
   			<h1>¡vota por tu <span class="bold">favorito!</span></h1>
 
   			<div class="row">
+  				<?php
+				$db->orderBy("RAND ()");
+				$results = $db->get('dobles');
+				foreach ($results as $row) :
+					$img = $row["imagen"];
+				?>
 				<div class="col-xs-6 col-sm-3 col-md-3">
 					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble" data-toggle="modal" data-target="#modal-voto">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/1.png">
+						<a href="javascript:void(0);" class="btn-doble" data-id="<?php echo $row['idDoble'];?>" data-img="<?php echo $img;?>">
+							<img class="img-responsive img-circle center-block img-doble" src="assets/img/<?php echo $img;?>">
 						</a>
-						<a href="" class="btn btn-default btn-vota" data-toggle="modal" data-target="#modal-voto">votar</a>
+						<a href="javascript:void(0);" class="btn btn-default btn-vota" id="<?php echo $row['idDoble'];?>" data-img="<?php echo $img;?>">votar</a>
 					</div>
 				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/2.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota" data-toggle="modal" data-target="#modal-gracias">votar</a>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/3.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota">votar</a>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/4.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota">votar</a>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/5.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota">votar</a>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/6.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota">votar</a>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/7.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota">votar</a>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3 col-md-3">
-					<div class="caja-doble">
-						<a href="javascript:void(0);" class="btn-doble">
-							<img class="img-responsive img-circle center-block img-doble" src="assets/img/8.png">
-						</a>
-						<a href="" class="btn btn-default btn-vota">votar</a>
-					</div>
-				</div>
+				<?php endforeach;?>
+				
   			</div>
   		</div>
   	</section> <!-- grid dobles -->
@@ -139,10 +107,7 @@
 
 	</footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="assets/js/dobles.js"></script>
+    
 
 	<!-- Modal -->
 	<div class="modal fade" id="modal-voto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -150,20 +115,40 @@
 		<div class="modal-content">
 		  <div class="modal-body">
 		  	 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			  	 <div class="title">
-			  	 	<h1>completa tus datos</h1>
-					<h2>para participar</h2>
-			  	 </div>
+			  	   	 <div class="title" id="title-form">
+			  	   	 	<h1>completa tus datos</h1>
+			  	 		<h2>para participar</h2>
+			  	   	 </div>
+			  	   	 <div class="title" id="title-gracias" style="display: none;">
+			  	   	 	<h2>gracias</h2>
+			  	   	 	<h1>por votar por</h1>
+			  	   	 </div>
 
-				<form id="formDatos" class="center-block">
+				<form id="formDatos" class="center-block" method="post" action="ajax/guardar.php">
 					<div class="form-group">
-						<input id="rut" type="text" class="form-control" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido.">
+						<input type="hidden" name="doble" id="id-doble" value="">
+						<input id="rut" name="rut" type="text" class="form-control rut" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido." required="">
 					</div>
 					<div class="form-group">
-						<input id="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar  un email válido. Así podremos contactarte si eres ganador.">
+						<input name="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar  un email válido. Así podremos contactarte si eres ganador." required="">
 					</div>
-					<a class="btn btn-default btn-enviar-voto center-block">votar</a>
+					<div class="form-group">
+						<div id="captchaimage"><img src="images/image.php?<?php echo time(); ?>" width="132" height="46" alt="Captcha image">
+						<a href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg">Refrescar imagen</a></div>
+						<label for="captcha">
+						Ingrese los caracteres como se ve en la imagen de arriba (case insensitive):</label>
+						<input type="text" maxlength="6" name="captcha" id="captcha" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-default btn-enviar-voto center-block">votar</button>
 				</form>
+				<!-- gracias -->
+
+				  	 <div class="caja-doble" style="display: none;" id="caja-gracias">
+				  	 	<img class="img-responsive img-circle center-block img-doble" src="" id="img-artista">
+				  	 		<p>Ya estás participando <br>
+						por espectaculares premios </p>
+						<a class="btn btn-default btn-enviar-voto center-block" data-dismiss="modal">cerrar</a>
+				  	 </div>
 		  </div>
 		</div>
 		</div>
@@ -189,6 +174,13 @@
 		</div>
 		</div>
 	</div> <!-- modal gracias -->
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/vendor/jquery/jquery.form.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.Rut.min.js" type="text/javascript"></script>
+	<script src="assets/vendor/jquery/jquery.validate.min.js"></script>
+    <script src="assets/js/dobles.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
