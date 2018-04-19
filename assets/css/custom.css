@@ -52,6 +52,15 @@ body { padding-right: 0px !important; }
 
 .center-block { display: table; margin: 0 auto; }
 
+.captcha-format { color: white; margin-bottom: 15px; }
+
+#captchaimage { margin-bottom: 20px; }
+@media (max-width: 767px) { #captchaimage { display: table; margin: 0 auto 10px auto; }
+  #captchaimage img { display: table; margin: 0 auto 10px auto; } }
+#captchaimage #refreshimg { display: inline-block; margin-bottom: 0; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border-radius: 0; border: none; background-color: #28B3E6; color: white; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; font-size: 15px; -webkit-transition: all .3s ease; transition: all .3s ease; text-decoration: none; margin-left: 10px; padding: 12px; }
+#captchaimage #refreshimg:hover { background-color: #009fcc; color: white; }
+@media (max-width: 767px) { #captchaimage #refreshimg { display: table; margin: 0 auto; } }
+
 .logo { margin-bottom: 30px; }
 @media (max-width: 767px) { .logo { max-width: 300px; margin-top: 40px; margin-bottom: 20px; height: auto; } }
 
@@ -98,28 +107,28 @@ footer .rrss ul li a.icon-wrapper { font-size: 20px; }
 
 .modal-dialog { display: inline-block; text-align: left; vertical-align: middle; }
 
-#modal-voto .modal-dialog .modal-content, #modal-gracias .modal-dialog .modal-content { background-color: transparent; -webkit-box-shadow: none; box-shadow: none; border: none; border-radius: 0; }
-#modal-voto .modal-dialog .modal-content .modal-body .close, #modal-gracias .modal-dialog .modal-content .modal-body .close { position: absolute; opacity: 1; color: white; font-size: 40px; right: 0; top: -40px; }
-#modal-voto .modal-dialog .modal-content .modal-body .title, #modal-gracias .modal-dialog .modal-content .modal-body .title { text-align: center; margin-bottom: 50px; }
-@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title, #modal-gracias .modal-dialog .modal-content .modal-body .title { margin-bottom: 30px; } }
-#modal-voto .modal-dialog .modal-content .modal-body .title h1, #modal-gracias .modal-dialog .modal-content .modal-body .title h1 { margin: 0; font-family: "Gotham-Light", Helvetica, Arial, sans-serif; font-size: 35px; text-transform: uppercase; color: white; }
-@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title h1, #modal-gracias .modal-dialog .modal-content .modal-body .title h1 { font-size: 22px; } }
-#modal-voto .modal-dialog .modal-content .modal-body .title h2, #modal-gracias .modal-dialog .modal-content .modal-body .title h2 { margin: 0; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; font-size: 35px; text-transform: uppercase; color: white; }
-@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title h2, #modal-gracias .modal-dialog .modal-content .modal-body .title h2 { font-size: 22px; } }
-@media (min-width: 768px) { #modal-voto .modal-dialog .modal-content .modal-body #formDatos, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos { width: 400px; } }
-@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body #formDatos.center-block, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos.center-block { display: block; width: 90%; } }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group { margin-bottom: 25px; }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control { background-color: rgba(90, 75, 81, 0.3); border: 1px solid white; border-radius: 0; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; color: white; font-size: 18px; padding: 30px; height: 50px; }
-@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control { font-size: 16px; padding: 10px; } }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-webkit-input-placeholder, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */ color: white; }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-moz-placeholder, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-moz-placeholder { /* Firefox 19+ */ color: white; }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-ms-input-placeholder, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-ms-input-placeholder { /* IE 10+ */ color: white; }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-moz-placeholder, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-moz-placeholder { /* Firefox 18- */ color: white; }
-#modal-voto .modal-dialog .modal-content .modal-body #formDatos .btn-enviar-voto, #modal-gracias .modal-dialog .modal-content .modal-body #formDatos .btn-enviar-voto { font-size: 20px; border-radius: 0; border: none; text-transform: uppercase; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; padding-left: 30px; padding-right: 30px; }
+#modal-voto .modal-dialog .modal-content, .modal-gracias .modal-dialog .modal-content { background-color: transparent; -webkit-box-shadow: none; box-shadow: none; border: none; border-radius: 0; }
+#modal-voto .modal-dialog .modal-content .modal-body .close, .modal-gracias .modal-dialog .modal-content .modal-body .close { position: absolute; opacity: 1; color: white; font-size: 40px; right: 0; top: -40px; }
+#modal-voto .modal-dialog .modal-content .modal-body .title, .modal-gracias .modal-dialog .modal-content .modal-body .title { text-align: center; margin-bottom: 30px; }
+@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title, .modal-gracias .modal-dialog .modal-content .modal-body .title { margin-bottom: 30px; } }
+#modal-voto .modal-dialog .modal-content .modal-body .title h1, .modal-gracias .modal-dialog .modal-content .modal-body .title h1 { margin: 0; font-family: "Gotham-Light", Helvetica, Arial, sans-serif; font-size: 30px; text-transform: uppercase; color: white; }
+@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title h1, .modal-gracias .modal-dialog .modal-content .modal-body .title h1 { font-size: 22px; } }
+#modal-voto .modal-dialog .modal-content .modal-body .title h2, .modal-gracias .modal-dialog .modal-content .modal-body .title h2 { margin: 0; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; font-size: 30px; text-transform: uppercase; color: white; }
+@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body .title h2, .modal-gracias .modal-dialog .modal-content .modal-body .title h2 { font-size: 22px; } }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos label.error, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos label.error { color: #e8387b; margin-top: 8px; }
+@media (min-width: 768px) { #modal-voto .modal-dialog .modal-content .modal-body #formDatos, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos { width: 400px; } }
+@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body #formDatos.center-block, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos.center-block { display: block; width: 90%; } }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group { margin-bottom: 25px; }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control { background-color: rgba(90, 75, 81, 0.3); border: 1px solid white; border-radius: 0; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; color: white; font-size: 15px; padding: 20px; height: 50px; }
+@media (max-width: 767px) { #modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control { font-size: 14px; padding: 8px; } }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-webkit-input-placeholder, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */ color: white; }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-moz-placeholder, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control::-moz-placeholder { /* Firefox 19+ */ color: white; }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-ms-input-placeholder, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-ms-input-placeholder { /* IE 10+ */ color: white; }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-moz-placeholder, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .form-group .form-control.form-control:-moz-placeholder { /* Firefox 18- */ color: white; }
+#modal-voto .modal-dialog .modal-content .modal-body #formDatos .btn-enviar-voto, .modal-gracias .modal-dialog .modal-content .modal-body #formDatos .btn-enviar-voto { font-size: 20px; border-radius: 0; border: none; text-transform: uppercase; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; padding-left: 30px; padding-right: 30px; }
 
-#modal-voto.modal-gracias .modal-dialog .modal-content .modal-body .title { margin-bottom: 20px; }
-@media (max-width: 767px) { #modal-voto.modal-gracias .modal-dialog .modal-content .modal-body .title h1, #modal-voto.modal-gracias .modal-dialog .modal-content .modal-body .title h2 { font-size: 30px; } }
-#modal-voto.modal-gracias .caja-doble { text-align: center; }
-#modal-voto.modal-gracias .caja-doble .img-doble { margin-bottom: 20px; display: block; border-radius: 200px; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #DDD; border: 5px solid #cfd8dc; }
-#modal-voto.modal-gracias .caja-doble p { font-family: "Gotham-Light", Helvetica, Arial, sans-serif; color: white; text-transform: none; font-size: 18px; margin: 0 0 20px 0; padding: 0; }
-#modal-voto.modal-gracias .caja-doble .btn-enviar-voto { font-size: 20px; border-radius: 0; border: none; text-transform: uppercase; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; padding-left: 30px; padding-right: 30px; }
+.modal-gracias .modal-dialog .modal-content .modal-body .title { margin-bottom: 20px; }
+@media (max-width: 767px) { .modal-gracias .modal-dialog .modal-content .modal-body .title h1, .modal-gracias .modal-dialog .modal-content .modal-body .title h2 { font-size: 30px; } }
+.modal-gracias .modal-dialog .modal-content .modal-body .img-doble { margin-bottom: 20px; display: block; border-radius: 200px; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #DDD; border: 5px solid #cfd8dc; }
+.modal-gracias .modal-dialog .modal-content .modal-body p { font-family: "Gotham-Light", Helvetica, Arial, sans-serif; color: white; text-transform: none; font-size: 18px; margin: 0 0 20px 0; padding: 0; text-align: center; }
+.modal-gracias .modal-dialog .modal-content .modal-body .btn-enviar-voto { font-size: 20px; border-radius: 0; border: none; text-transform: uppercase; font-family: "Gotham-Bold", Helvetica, Arial, sans-serif; padding-left: 30px; padding-right: 30px; }

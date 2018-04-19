@@ -27,7 +27,7 @@
 
 	  $.ajax({
 	    url: "ajax/check_session.php"
-	    
+
 	  })
 	    .done(function( msg ) {
 	    	//console.log(msg);
@@ -36,7 +36,7 @@
 	      	$("#formDatos").show();
 	      	$("#caja-gracias").hide();
 	      	$("#title-gracias").hide();
-	      	$('#modal-voto').modal(); 
+	      	$('#modal-voto').modal();
 	      }else{
 	      	//data-toggle="modal" data-target="#modal-voto"
 	      	$('#modal-voto').addClass("modal-gracias");
@@ -53,12 +53,12 @@
 	      	  .done(function( data ) {
 	      	  	if(data == 'ok'){
 		      	  	$('#modal-voto').modal();
-				}  	 	
+				}
 	      	  });
 	      }
 	    });
-	
-}	
+
+}
 
 	var v = $("#formDatos").validate({
 			rules: {
@@ -72,13 +72,13 @@
 			},
 			submitHandler: function(form) {
 				$(form).ajaxSubmit({
-					beforeSubmit: function() { 
+					beforeSubmit: function() {
 						$(".loading").fadeIn();
 					},
-					 success:    function(data) { 
+					 success:    function(data) {
 					 	console.log(data);
 					 	$(".loading").fadeOut();
-				        
+
 				        if(data == 'ok'){
 				        	$("#formDatos").hide();
 				        	$('#modal-voto').addClass("modal-gracias");
@@ -88,14 +88,14 @@
 					      }else{
 					      	//error
 					      }
-				    } 
+				    }
 				});
 			}
 	});
 
 	jQuery.validator.addMethod("rut", function(value, element) {
 	  return this.optional(element) || $.Rut.validar(value);
-	}, "Debe ser un rut valido.");
+	}, "Debe ser un rut válido.");
 
 	$('.rut').Rut({validation: false});
 

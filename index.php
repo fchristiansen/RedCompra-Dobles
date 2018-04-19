@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Make the page validate
 ini_set('session.use_trans_sid', '0');
 
@@ -67,9 +67,7 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 <div id="dobleslink"></div>
   	<section id="grid-dobles">
   		<div class="container">
-
-  			<h1>¡vota por tu <span class="bold">favorito!</span></h1>
-
+  			<h1>Vota por tus favoritos, <span class="bold">cuantas veces quieras.</span></h1>
   			<div class="row">
   				<?php
 				$db->orderBy("RAND ()");
@@ -86,7 +84,7 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 					</div>
 				</div>
 				<?php endforeach;?>
-				
+
   			</div>
   		</div>
   	</section> <!-- grid dobles -->
@@ -107,7 +105,7 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 
 	</footer>
 
-    
+
 
 	<!-- Modal -->
 	<div class="modal fade" id="modal-voto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -116,8 +114,8 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 		  <div class="modal-body">
 		  	 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			  	   	 <div class="title" id="title-form">
-			  	   	 	<h1>completa tus datos</h1>
-			  	 		<h2>para participar</h2>
+			  	 		<h1>Completa tus datos para participar</h1>
+			  	 		<h2>por 40 millones.</h2>
 			  	   	 </div>
 			  	   	 <div class="title" id="title-gracias" style="display: none;">
 			  	   	 	<h2>gracias</h2>
@@ -127,15 +125,15 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				<form id="formDatos" class="center-block" method="post" action="ajax/guardar.php">
 					<div class="form-group">
 						<input type="hidden" name="doble" id="id-doble" value="">
-						<input id="rut" name="rut" type="text" class="form-control rut" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido." required="">
+						<input title="Este campo es requerido" id="rut" name="rut" type="text" class="form-control rut" placeholder="RUT" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un RUT válido." required="">
 					</div>
 					<div class="form-group">
-						<input name="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar  un email válido. Así podremos contactarte si eres ganador." required="">
+						<input title="Este campo es requerido" name="email" type="email" class="form-control" placeholder="EMAIL" data-trigger="focus" data-toggle="tooltip" data-container="body" data-placement="top" data-title="Recuerda ingresar un email válido. Así podremos contactarte si eres ganador." required="">
 					</div>
 					<div class="form-group">
 						<div id="captchaimage"><img src="images/image.php?<?php echo time(); ?>" width="132" height="46" alt="Captcha image">
-						<a href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg">Refrescar imagen</a></div>
-						<label for="captcha">
+						<a class="btn btn-default" href="<?php echo htmlEntities($_SERVER['PHP_SELF'], ENT_QUOTES); ?>" id="refreshimg">Refrescar imagen</a></div>
+						<label class="captcha-format" for="captcha">
 						Ingrese los caracteres como se ve en la imagen de arriba (case insensitive):</label>
 						<input type="text" maxlength="6" name="captcha" id="captcha" class="form-control">
 					</div>
@@ -146,7 +144,7 @@ $db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				  	 <div class="caja-doble" style="display: none;" id="caja-gracias">
 				  	 	<img class="img-responsive img-circle center-block img-doble" src="" id="img-artista">
 				  	 		<p>Ya estás participando <br>
-						por espectaculares premios </p>
+								por espectaculares premios </p>
 						<a class="btn btn-default btn-enviar-voto center-block" data-dismiss="modal">cerrar</a>
 				  	 </div>
 		  </div>
